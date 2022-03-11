@@ -22,7 +22,7 @@ spec:
     vault:
       reviewer_service: vault-reviewer
       role: vault-role
-      address: http://52.146.19.155:8200
+      address: http://20.43.156.77:8200
       authpath: devorg1-net-auth
       policy: vault-crypto-orderer-org1-net-ro
       secret_path: secret
