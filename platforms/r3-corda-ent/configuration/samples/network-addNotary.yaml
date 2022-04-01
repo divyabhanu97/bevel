@@ -9,7 +9,7 @@
 # yaml-language-server: $schema=../../../../platforms/network-schema.json
 # This is a sample configuration file for Corda Enterprise network to add a New Notary organization to existing network.
 # For multiple K8s clusters, there should be multiple configuration files or refer to configuration guide on the below link.
-# https://bevel.readthedocs.io/en/latest/operations/corda_networkyaml.html
+# https://hyperledger-bevel.readthedocs.io/en/latest/operations/corda_networkyaml.html
 network:
   # Network level configuration specifies the attributes required for each organization
   # to join an existing network.
@@ -105,13 +105,13 @@ network:
       cordapps:
         jars: 
         - jar:
-            # e.g https://nexus.repo.url/nexus/repository/AccentureBlockchainFulcrum_Release/com/supplychain/bcc/cordapp-supply-chain/0.1/cordapp-supply-chain-0.1.jar
+            # e.g https://maven.pkg.github.com/hyperledger/bevel/com.supplychain.bcc.cordapp-supply-chain/4.7/cordapp-supply-chain-4.7.jar
             url: "https://repo/path/cordapp1.jar"
         - jar:
-            # e.g https://nexus.repo.url/nexus/repository/AccentureBlockchainFulcrum_Release/com/supplychain/bcc/cordapp-contracts-states/0.1/cordapp-contracts-states-0.1.jar
+            # e.g https://maven.pkg.github.com/hyperledger/bevel/com.supplychain.bcc.cordapp-contracts-states/4.7/cordapp-contracts-states-4.7.jar
             url: "https://repo/path/cordapp2.jar"
-        username: "repository_username"
-        password: "repository_password"
+        username: "git_username"
+        password: "git_access_token"
 
       credentials:
         keystore:
@@ -225,6 +225,7 @@ network:
     - organization:
       name: add-notary
       version: 4.7
+      cenm_version: 1.5
       country: CH
       state: Zurich
       location: Zurich
@@ -266,13 +267,13 @@ network:
       cordapps:
         jars: 
         - jar:
-            # e.g https://nexus.repo.url/nexus/repository/AccentureBlockchainFulcrum_Release/com/supplychain/bcc/cordapp-supply-chain/0.1/cordapp-supply-chain-0.1.jar
+            # e.g https://maven.pkg.github.com/hyperledger/bevel/com.supplychain.bcc.cordapp-supply-chain/4.7/cordapp-supply-chain-4.7.jar
             url: "https://repo/path/cordapp1.jar"
         - jar:
-            # e.g https://nexus.repo.url/nexus/repository/AccentureBlockchainFulcrum_Release/com/supplychain/bcc/cordapp-contracts-states/0.1/cordapp-contracts-states-0.1.jar
+            # e.g https://maven.pkg.github.com/hyperledger/bevel/com.supplychain.bcc.cordapp-contracts-states/4.7/cordapp-contracts-states-4.7.jar
             url: "https://repo/path/cordapp2.jar"
-        username: "repository_username"
-        password: "repository_password"
+        username: "git_username"
+        password: "git_access_token"
 
       # The participating nodes are named as peers 
       services:
